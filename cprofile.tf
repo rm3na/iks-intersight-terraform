@@ -52,7 +52,7 @@ resource "intersight_kubernetes_cluster_profile" "kubeprof" {
 	moid = data.intersight_ippool_pool.ippool_moid.results.0.moid
   }
   management_config {
-	encrypted_etcd = false
+	#encrypted_etcd = false
 	load_balancer_count = var.mgmtcfglbcnt
 	ssh_keys = [ 
 		 var.mgmtcfgsshkeys
