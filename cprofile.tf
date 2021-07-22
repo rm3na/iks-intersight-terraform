@@ -11,7 +11,8 @@ terraform {
 provider "intersight" {
   apikey        = var.api_key_id
   secretkey = var.api_private_key
-  endpoint      = var.api_endpoint
+  #endpoint      = var.api_endpoint
+  endpoint      = "https://intersight.com"
 }
 
 data "intersight_organization_organization" "organization_moid" {
