@@ -1,13 +1,13 @@
 endpoint = "https://www.intersight.com"
 mgmtcfgsshkeys = ""
 name = "testingiks"
-ippool_list = "k8s-pool"
+ippool_list = "default-k8s-cidr"
 netcfg_list = "k8s-test-network-policy"
 syscfg_list = "k8s-test-sys-config-policy"
 infra_list = "default-vmware"
-ippoolmaster_list = "k8s_pool"
-ippoolworker_list = "k8s_pool"
-kubever_list = "Kubernetes-1.19.5"
+ippoolmaster_list = "default-k8s-cidr"
+ippoolworker_list = "default-k8s-cidr"
+kubever_list = "defaul-k8s"
 orgobjtype = "organization.Organization"
 mgmtcfgetcd = false
 mgmtcfglbcnt = 1
