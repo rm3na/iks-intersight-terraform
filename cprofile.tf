@@ -90,7 +90,8 @@ data "intersight_ippool_pool" "ippoolworker_moid" {
 
 # Kube version moids
 data "intersight_kubernetes_version_policy" "kubever_moid" {
-  name  = var.kubever_list
+  #name  = var.kubever_list
+  name = "default-vmware"
 }
 
 
