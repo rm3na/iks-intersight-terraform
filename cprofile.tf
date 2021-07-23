@@ -11,8 +11,8 @@ terraform {
 provider "intersight" {
   apikey        = var.api_key_id
   secretkey = var.api_private_key
-  #endpoint      = var.api_endpoint
-  endpoint      = "https://intersight.com"
+  endpoint      = var.api_endpoint
+  #endpoint      = "https://intersight.com"
 }
 
 data "intersight_organization_organization" "organization_moid" {
@@ -75,7 +75,8 @@ resource "intersight_kubernetes_cluster_profile" "kubeprof" {
 
 # Infra provider moids
 data "intersight_kubernetes_virtual_machine_infrastructure_provider" "infra_moid" {
-  name  = var.infra_list
+  #name  = var.infra_list
+  name = "default-vmware"
 }
 
 # IpPool moids
@@ -90,8 +91,7 @@ data "intersight_ippool_pool" "ippoolworker_moid" {
 
 # Kube version moids
 data "intersight_kubernetes_version_policy" "kubever_moid" {
-  #name  = var.kubever_list
-  name = "default-vmware"
+  name  = var.kubever_list
 }
 
 
